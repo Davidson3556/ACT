@@ -67,9 +67,9 @@ export default function ImageSlider({
                 slideIndex === currentIndex ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <div className="flex gap-6 h-full">
+              <div className="flex gap-2 md:gap-6 h-full">
                 {/* First Image */}
-                <div className="relative flex-1 rounded-xl overflow-hidden">
+                <div className="relative flex-1 rounded overflow-hidden">
                   <Image
                     src={image1}
                     alt={`Outreach image ${slideIndex * 2 + 1}`}
@@ -80,7 +80,7 @@ export default function ImageSlider({
                 </div>
                 {/* Second Image */}
                 {image2 && (
-                  <div className="relative flex-1 rounded-xl overflow-hidden">
+                  <div className="relative flex-1 rounded overflow-hidden">
                     <Image
                       src={image2}
                       alt={`Outreach image ${slideIndex * 2 + 2}`}

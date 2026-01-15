@@ -68,11 +68,11 @@ export default function ContactPage() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#FBF4EF]">
         <div className="container-max section-padding text-center">
           {/* Heading */}
-          <h1 className="text-[36px] md:text-[48px] font-bold text-[#212121] mb-6 font-familjen leading-[110%]">
+          <h1 className="text-[36px] md:text-[48px] lg:text-[64px] font-bold text-[#212121] mb-6 font-familjen leading-[110%]">
             Let&apos;s Connect, We are<br className="hidden md:block" /> Here for You
           </h1>
           {/* Subtext */}
-          <p className="text-[#212121] text-[14px] md:text-[16px] max-w-2xl mx-auto leading-[160%] font-bricolage">
+          <p className="text-[#212121] text-[16px] md:text-[18px] lg:text-[24px] max-w-5xl mx-auto leading-[160%] ">
             Whether you need support, have questions, or want to partner with us, we&apos;re here to listen.
             Reach out to ACT Foundation and take the next step toward care, clarity, and hope.
           </p>
@@ -82,13 +82,13 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-max section-padding">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <h2 className="text-[28px] md:text-[36px] font-bold text-[#9D2227] mb-4 font-familjen leading-[120%]">
+              <h2 className="text-[28px] md:text-[36px] font-bold text-[#101828] mb-4 font-familjen leading-[120%]">
                 Contact us now to get started.
               </h2>
-              <p className="text-[#666] text-[14px] md:text-[16px]">
+              <p className="text-[#666] text-[14px] md:text-[20px]">
                 Reach out to us today and begin your journey towards financial growth and stability.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
               {/* Name Row */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-[14px] font-medium text-[#212121] mb-2">
+                  <label htmlFor="firstName" className="block text-[14px] md:text-[18px] font-medium text-[#101828] mb-2">
                     Full Names
                   </label>
                   <input
@@ -108,14 +108,14 @@ export default function ContactPage() {
                     placeholder="john"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
+                    className="w-full px-4 py-3 bg-[#FAFAFA] border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-[14px] font-medium text-[#212121] mb-2">
+                  <label htmlFor="lastName" className="block text-[14px] md:text-[18px] font-medium text-[#101828] mb-2">
                     Last name
-                  </label>
+                  </label>  
                   <input
                     type="text"
                     id="lastName"
@@ -123,7 +123,7 @@ export default function ContactPage() {
                     placeholder="Seraph"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
+                    className="w-full px-4 py-3 bg-[#FAFAFA] border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
                     required
                   />
                 </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
               {/* Email & Phone Row */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-[14px] font-medium text-[#212121] mb-2">
+                  <label htmlFor="email" className="block text-[14px] md:text-[18px] font-medium text-[#101828] mb-2">
                     Email Address
                   </label>
                   <input
@@ -142,12 +142,12 @@ export default function ContactPage() {
                     placeholder="example@gmail.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
+                    className="w-full px-4 py-3 bg-[#FAFAFA] border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-[14px] font-medium text-[#212121] mb-2">
+                  <label htmlFor="phone" className="block text-[14px] md:text-[18px] font-medium text-[#101828] mb-2">
                     Phone Number
                   </label>
                   <input
@@ -157,35 +157,37 @@ export default function ContactPage() {
                     placeholder="+2341234567890"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
+                    className="w-full px-4 py-3 bg-[#FAFAFA] border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px]"
                   />
                 </div>
               </div>
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-[14px] font-medium text-[#212121] mb-2">
+                <label htmlFor="message" className="block text-[14px] md:text-[18px] font-medium text-[#101828] mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Say something nice..."
+                  placeholder="Type something here..."
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px] resize-none"
+                  className="w-full px-4 py-3 bg-[#FAFAFA] border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D2227]/20 focus:border-[#9D2227] text-[14px] resize-none"
                   required
                 />
               </div>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-[#9D2227] text-white font-semibold py-4 px-8 rounded-xl hover:bg-[#822224] transition-colors text-[16px]"
-              >
-                Send
-              </button>
+              {/* Submit Button - Width: 518px, Height: 46px, Radius: 10px */}
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="w-full max-w-[518px] h-[46px] bg-[#9D2227] text-white font-semibold px-[30px] py-[10px] rounded-[10px] hover:bg-[#822224] transition-colors text-[16px]"
+                >
+                  Send
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -194,7 +196,7 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-max section-padding">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-[28px] md:text-[36px] font-bold text-[#212121] mb-4 font-familjen leading-[120%]">

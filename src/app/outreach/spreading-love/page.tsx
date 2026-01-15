@@ -15,14 +15,11 @@ const outreachImages = [
   "/outreach9.png",
 ];
 
-
-
 const communityImages = [
   "/community2.png",
   "/community3.png",
   "/community4.png",
   "/community1.png",
-
 ];
 
 export default function SpreadingLovePage() {
@@ -30,84 +27,77 @@ export default function SpreadingLovePage() {
     <main>
       <Navbar />
       
-      {/* Article Content */}
-      <section className="pt-32  md:pt-40  bg-white">
+      {/* Article Section */}
+      <section className="pt-32 pb-8 md:pt-40 md:pb-12 bg-white">
         <div className="container-max section-padding">
-          <div className="max-w-4xl mx-auto">
-            {/* Title - Familjen Grotesk Bold */}
-            <h1 className="text-[32px] md:text-[40px] font-bold text-[#9D2227] mb-8 font-familjen leading-[120%]">
-              Motherless Babies Home Visit
-            </h1>
+          {/* Title - Familjen Grotesk, Bold, 48px, #1B2232, left-aligned */}
+          <h1 className="text-[28px] md:text-[48px] font-bold text-[#1B2232] font-familjen leading-[48px] tracking-[-1.2px] mb-8">
+            Motherless Babies Home Visit
+          </h1>
 
-            {/* Main Image - 1328x414px aspect ratio */}
-            <div className="relative w-full h-[200px] md:h-[414px] rounded-xl overflow-hidden mb-8">
-              <Image
-                src="/motherless.png"
-                alt="ACT volunteers at Motherless Babies Home"
-                fill
-                className="object-cover"
-              />
-            </div>
+          {/* Hero Image - 1328px x 414px */}
+          <div className="relative w-full h-[200px] md:h-[414px] rounded overflow-hidden mb-8">
+            <Image
+              src="/motherless.png"
+              alt="ACT volunteers at Motherless Babies Home"
+              fill
+              className="object-cover"
+            />
+          </div>
 
-            {/* Article Content */}
-            <div className="prose prose-lg max-w-none">
-              <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-6">
-                ACT volunteers delivered care packs to a motherless babies home, providing essential items and spending time with the children. The focus was care, connection, and restoring a sense of belonging.
-              </p>
-
-              <h2 className="text-[20px] md:text-[24px] font-bold text-[#212121] mb-4 font-familjen">
-                Hospital Support Initiative
-              </h2>
-              
-              <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-6">
-                We visited two hospitals and provided financial assistance to patients who were unable to settle their medical bills. Beyond financial support, we spent time with patients and families, offering prayer, encouragement, and presence during vulnerable moments.
-              </p>
-            </div>
+          {/* Article Content - Jost, Light (300), 20px, #484242, line-height 28px */}
+          <div className="max-w-6xl">
+            <p className="text-[#484242] text-[16px] md:text-[20px] font-light leading-[28px]">
+              ACT volunteers delivered care packs to a motherless babies home, providing essential items and spending time with the children. The focus was care, connection, and restoring a sense of belonging.
+            <br />
+              Hospital Support Initiative
+            </p>
+            <p className="text-[#484242] text-[16px] md:text-[20px] font-light leading-[28px] mb-6">
+              We visited two hospitals and provided financial assistance to patients who were unable to settle their medical bills. Beyond financial support, we spent time with patients and families, offering prayer, encouragement, and presence during vulnerable moments.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Image Gallery Slider Section */}
-      <section className="py-16  ">
+      <section className="py-16">
         <div className="container-max section-padding">
           <ImageSlider images={outreachImages} autoPlayInterval={4000} />
         </div>
       </section>
 
       {/* Community Food Support Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-white">
         <div className="container-max section-padding">
-          <div className="max-w-4xl mx-auto">
-            {/* Title - Familjen Grotesk Bold */}
-            <h2 className="text-[28px] md:text-[36px] font-bold text-[#9D2227] mb-8 font-familjen leading-[120%]">
-              Community Food Support
-            </h2>
+          {/* Title - Familjen Grotesk, Bold, 48px, #1B2232, left-aligned */}
+          <h2 className="text-[28px] md:text-[48px] font-bold text-[#1B2232] font-familjen leading-[48px] tracking-[-1.2px] mb-8">
+            Community Food Support
+          </h2>
 
-            {/* Image */}
-            <div className="relative w-full h-[200px] md:h-[414px] rounded-xl overflow-hidden mb-8">
-              <Image
-                src="/community1.png"
-                alt="ACT Community Food Support program"
-                fill
-                className="object-cover"
-              />
-            </div>
+          {/* Image */}
+          <div className="relative w-full h-[200px] md:h-[414px] rounded overflow-hidden mb-8">
+            <Image
+              src="/community1.png"
+              alt="ACT Community Food Support program"
+              fill
+              className="object-cover"
+            />
+          </div>
 
-            {/* Content */}
-            <div className="prose prose-lg max-w-none">
-              <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-6">
-                Our team visited a local food bank to donate supplies and understand the process behind food distribution to vulnerable families. This was not just a drop-off. We learned how food insecurity operates on the ground and how partnerships can improve reach.
-              </p>
+          {/* Content - Jost, Light (300), 20px, #484242, line-height 28px */}
+          <div className="max-w-6xl">
+            <p className="text-[#484242] text-[16px] md:text-[20px] font-light leading-[28px] ">
+Our team visited a local food bank to donate supplies and understand the process behind food distribution to vulnerable families. This was not just a drop-off. We learned how food insecurity operates on the ground and how partnerships can improve reach.
+Feed the Need Durham            </p>
 
-              <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-6">
-                ACT volunteers actively participated in feeding the homeless through Feed the Need Durham. We served meals directly and engaged with individuals experiencing homelessness, reinforcing our belief that dignity and presence matter as much as provision.
-              </p>
-            </div>
+            <p className="text-[#484242] text-[16px] md:text-[20px] font-light leading-[28px] mb-6">
+ACT volunteers actively participated in feeding the homeless through Feed the Need Durham. We served meals directly and engaged with individuals experiencing homelessness, reinforcing our belief that dignity and presence matter as much as provision            </p>
           </div>
         </div>
       </section>
 
- <section className="py-16 md:py-24 ">
+      {/* Community Image Gallery Slider Section */}
+      <section className="py-16">
         <div className="container-max section-padding">
           <ImageSlider images={communityImages} autoPlayInterval={4000} />
         </div>

@@ -9,7 +9,7 @@ export default function SickleCellPage() {
       <Navbar />
       
       {/* Page Title */}
-      <section className="pt-32 pb-8 md:pt-40 md:pb-12 bg-white">
+      <section className="pt-32   bg-white">
         <div className="container-max section-padding text-center">
           <h1 className="text-[32px] md:text-[48px] font-bold text-[#212121] font-familjen leading-[110%]">
             Sickle cell disease (SCD)
@@ -20,7 +20,7 @@ export default function SickleCellPage() {
       {/* Hero Banner - Just the image */}
       <section className="py-8 md:py-12 bg-white">
         <div className="container-max section-padding">
-          <div className="relative w-full h-[200px] md:h-[414px] rounded-2xl overflow-hidden">
+          <div className="relative w-full h-[200px] md:h-[414px] rounded overflow-hidden">
             <Image
               src="/sickle.png"
               alt="Sickle Cell Disease"
@@ -34,11 +34,11 @@ export default function SickleCellPage() {
       {/* Content Section */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container-max section-padding">
-          <div className="max-w-4xl mx-auto prose prose-lg">
+          <div className="max-w-6xl mx-auto prose prose-lg">
             
             {/* Introduction */}
             <div className="mb-12">
-              <h3 className="text-[20px] md:text-[24px] font-bold text-[#9D2227] mb-4 font-familjen">
+              <h3 className="text-[20px] md:text-[24px] font-bold text-[#484242] mb-4 font-familjen">
                 Introduction
               </h3>
               <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%]">
@@ -48,7 +48,7 @@ export default function SickleCellPage() {
 
             {/* Pathophysiology */}
             <div className="mb-12">
-              <h3 className="text-[20px] md:text-[24px] font-bold text-[#9D2227] mb-4 font-familjen">
+              <h3 className="text-[20px] md:text-[24px] font-bold text-[#484242] mb-4 font-familjen">
                 The Biological Foundation: Pathophysiology
               </h3>
               <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-4">
@@ -65,7 +65,7 @@ export default function SickleCellPage() {
 
             {/* Anemia Diagram Section */}
             <div className="mb-12">
-              <h4 className="text-[18px] md:text-[20px] font-bold text-[#9D2227] mb-6 font-familjen">
+              <h4 className="text-[18px] md:text-[20px] font-bold text-[#484242] mb-6 font-familjen">
                 ANEMIA
               </h4>
               <div className="relative w-full">
@@ -81,7 +81,7 @@ export default function SickleCellPage() {
 
             {/* Genetic Inheritance */}
             <div className="mb-12">
-              <h3 className="text-[20px] md:text-[24px] font-bold text-[#9D2227] mb-4 font-familjen">
+              <h3 className="text-[20px] md:text-[24px] font-bold text-[#484242] mb-4 font-familjen">
                 Genetic Inheritance Patterns
               </h3>
               <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-4">
@@ -99,7 +99,7 @@ export default function SickleCellPage() {
 
             {/* Clinical Manifestations */}
             <div className="mb-12">
-              <h3 className="text-[20px] md:text-[24px] font-bold text-[#9D2227] mb-4 font-familjen">
+              <h3 className="text-[20px] md:text-[24px] font-bold text-[#484242] mb-4 font-familjen">
                 Clinical Manifestations
               </h3>
               <p className="text-[#212121] text-[14px] md:text-[16px] leading-[180%] mb-4">
