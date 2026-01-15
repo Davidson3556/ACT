@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -26,7 +29,13 @@ export default function WhatActDoesSection() {
     <section className="py-16 md:py-24 bg-[#FBF4EF] font-jost">
       <div className="container-max section-padding">
         {/* Header */}
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-12"
+        >
           {/* Heading - Familjen Grotesk Bold 40px + Playfair Display Bold Italic 40px */}
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#212121] mb-4 font-familjen leading-[100%]">
             What ACT <span className="font-playfair italic text-[#F4AF25]">Does</span>
@@ -36,13 +45,30 @@ export default function WhatActDoesSection() {
             At ACT Foundation, we deliver life-changing support through Cancer and Sickle
             Cell advocacy, education, and care programs
           </p>
-        </div>
+        </motion.div>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15 }
+            }
+          }}
+          className="grid md:grid-cols-3 gap-6 md:gap-8"
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
               className="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Icon */}
@@ -65,9 +91,9 @@ export default function WhatActDoesSection() {
               <p className="text-[#212121] text-[16px] md:text-[18px] font-light leading-[100%]">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

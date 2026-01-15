@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -29,9 +32,26 @@ export default function Footer() {
       </div>
 
       <div className="container-max section-padding relative z-10">
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15 }
+            }
+          }}
+          className="grid md:grid-cols-3 gap-8 md:gap-12"
+        >
           {/* Logo & Description */}
-          <div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+          >
             <Link href="/" className="inline-block mb-4">
               <Image
                 src="/logo.svg"
@@ -47,10 +67,15 @@ export default function Footer() {
               steady outreach for individuals and families affected by
               sickle cell and cancer.
             </p>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+          >
             <h4 className="text-lg font-semibold text-[#212121] mb-4">
               Quick Links
             </h4>
@@ -66,10 +91,15 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact */}
-          <div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+          >
             <h4 className="text-lg font-semibold text-[#212121] mb-4">
               Contact
             </h4>
@@ -93,8 +123,8 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   );

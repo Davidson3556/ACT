@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const educationalCards = [
   {
@@ -24,7 +27,13 @@ export default function EducationalSection() {
     <section className="py-16 md:py-24 bg-white font-jost">
       <div className="container-max section-padding">
         {/* Header */}
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-12"
+        >
           {/* Heading - Familjen Grotesk Bold 48px + Playfair Display Bold Italic 48px */}
           <h2 className="text-[36px] md:text-[48px] font-bold text-[#101828] mb-4 font-familjen leading-[100%] tracking-[-0.02em]">
             Educational <span className="font-playfair italic text-[#F4AF25]">insight</span>
@@ -33,12 +42,31 @@ export default function EducationalSection() {
           <p className="text-[#667085] text-[18px] md:text-[20px] max-w-2xl mx-auto leading-[150%]">
             Inspiring life-changing health knowledge that supports early awareness
           </p>
-        </div>
+        </motion.div>
 
         {/* Educational Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+          className="grid md:grid-cols-2 gap-8"
+        >
           {educationalCards.map((card, index) => (
-            <div key={index} className="group">
+            <motion.div 
+              key={index} 
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+              }}
+              className="group"
+            >
               {/* Image */}
               <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
                 <Image
@@ -59,16 +87,18 @@ export default function EducationalSection() {
                 {card.description}
               </p>
               {/* Link - Urbanist Medium 18px #9D2227 */}
-              <Link
-                href={card.link}
-                className="inline-flex items-center gap-2 text-[#9D2227] font-urbanist font-medium text-[16px] md:text-[18px] hover:gap-3 transition-all"
-              >
-                Read full learning
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+              <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
+                <Link
+                  href={card.link}
+                  className="inline-flex items-center gap-2 text-[#9D2227] font-urbanist font-medium text-[16px] md:text-[18px] hover:gap-3 transition-all"
+                >
+                  Read full learning
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

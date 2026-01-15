@@ -44,7 +44,39 @@ export const metadata: Metadata = {
     "cancer awareness",
     "health education",
     "community support",
+    "charity",
+    "Nigeria",
+    "healthcare",
+    "RMC",
+    "Renal Medullary Carcinoma",
   ],
+  authors: [{ name: "ACT Foundation" }],
+  creator: "ACT Foundation",
+  publisher: "ACT Foundation",
+  openGraph: {
+    title: "ACT Foundation | A.C.T Today, Transform Tomorrow",
+    description:
+      "ACT Foundation delivers life-changing support through Cancer and Sickle Cell advocacy, education, and care programs.",
+    url: "https://actfoundation.org",
+    siteName: "ACT Foundation",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ACT Foundation | A.C.T Today, Transform Tomorrow",
+    description:
+      "ACT Foundation delivers life-changing support through Cancer and Sickle Cell advocacy, education, and care programs.",
+  },
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -54,6 +86,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+      </head>
       <body
         className={`${familjenGrotesk.variable} ${jost.variable} ${playfairDisplay.variable} ${urbanist.variable} ${bricolageGrotesque.variable} antialiased`}
       >

@@ -46,7 +46,7 @@ export default function ImageSlider({
   };
 
   // Get pairs of images for display
-  const getImagePair = (slideIndex: number) => {
+  const getImagePair = (slideIndex: number): [string, string | null] => {
     const firstIndex = slideIndex * 2;
     return [
       images[firstIndex],
@@ -60,6 +60,10 @@ export default function ImageSlider({
       <div className="relative w-full h-[300px] md:h-[520px] overflow-hidden">
         {Array.from({ length: totalSlides }).map((_, slideIndex) => {
           const [image1, image2] = getImagePair(slideIndex);
+          
+          // Skip rendering if no image1
+          if (!image1) return null;
+          
           return (
             <div
               key={slideIndex}

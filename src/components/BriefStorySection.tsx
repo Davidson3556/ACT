@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function BriefStorySection() {
   return (
@@ -8,7 +11,13 @@ export default function BriefStorySection() {
       <div className="container-max section-padding">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left Content */}
-          <div className="order-2 md:order-1">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="order-2 md:order-1"
+          >
             {/* Heading - Familjen Grotesk Bold + Playfair Display Bold Italic */}
             <h2 className="text-[32px] md:text-[40px] font-bold text-[#212121] mb-6 font-familjen leading-[100%]">
               Brief story <span className="font-playfair italic text-[#F4AF25]">block</span>
@@ -30,17 +39,28 @@ export default function BriefStorySection() {
             </div>
 
             {/* Button - Height 48px, Border 1px #9D2227, Radius 12px, Jost SemiBold 18px */}
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 mt-8 h-12 px-6 border border-[#9D2227] text-[#9D2227] rounded-xl text-[18px] font-semibold hover:bg-[#9D2227] hover:text-white transition-colors"
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Learn More About Us
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 mt-8 h-12 px-6 border border-[#9D2227] text-[#9D2227] rounded-xl text-[18px] font-semibold hover:bg-[#9D2227] hover:text-white transition-colors"
+              >
+                Learn More About Us
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </motion.div>
+          </motion.div>
 
           {/* Right Image */}
-          <div className="order-1 md:order-2">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="order-1 md:order-2"
+          >
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
               <Image
                 src="/volunter.png"
@@ -49,7 +69,7 @@ export default function BriefStorySection() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
