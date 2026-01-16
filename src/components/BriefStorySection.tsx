@@ -25,7 +25,7 @@ export default function BriefStorySection() {
             
             {/* Body text - Jost, Regular (400), 20px, #000000 */}
             <div className="space-y-4  font-light text-[#656262] text-[18px] md:text-[20px] leading-[100%]">
-              <p>
+              <p className="text-[#656262]">
                 ACT exists because illness should not isolate people.
                 Too many families are left to navigate complex diagnoses without guidance, 
                 reliable information, or support. What began with the loss of one life has 
