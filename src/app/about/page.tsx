@@ -141,7 +141,7 @@ export default function AboutPage() {
                     alt={value.title} 
                     width={24} 
                     height={24}
-                    className="w-12 h-12"
+                    className="w-6 h-6 md:w-10 md:h-10"
                   />
                 </div>
                 <h4 className="text-[14px] md:text-[18px] font-semibold text-[#212121] mb-2 font-familjen">
