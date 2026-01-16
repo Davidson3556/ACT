@@ -21,8 +21,8 @@ export default function AwarenessSection() {
         {/* Featured Story */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Images - Side by side */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
+          <div className="grid grid-cols-2 ">
+            <div className="relative aspect-[4/5]  overflow-hidden">
               <Image
                 src="/wuse1.png"
                 alt="ACT Foundation at Wuse District Hospital"
@@ -30,7 +30,7 @@ export default function AwarenessSection() {
                 className="object-cover"
               />
             </div>
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/wuse2.png"
                 alt="ACT Foundation community food support"
@@ -47,7 +47,7 @@ export default function AwarenessSection() {
               Spreading love and sustenance
             </h3>
             {/* Body - Jost Regular 20px #000000 */}
-            <p className="text-[#000000] text-[18px] md:text-[20px] leading-[100%] mb-6">
+            <p className="text-[#000000] text-[18px] md:text-[20px] font-light leading-[100%] mb-6">
               From uplifting spirits at the Motherless Babies Home to providing
               essential nourishment through our Community Food Support
               program, our team is dedicated to holistic care. We believe in

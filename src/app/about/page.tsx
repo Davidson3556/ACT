@@ -45,7 +45,7 @@ export default function AboutPage() {
           </h1>
           {/* Subtext - Jost Regular 24px #212121 */}
           <p className="text-[#212121] text-[18px] md:text-[24px] max-w-3xl mx-auto leading-[100%]">
-            we build comprehensive support systems for individuals and families impacted by<br className="hidden md:block" /> Sickle Cell Disease and Cancer
+            we build comprehensive support systems for individuals and families impacted by Sickle Cell Disease and Cancer
           </p>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function AboutPage() {
       {/* Story Section */}
       <section className="py-16 md:py-24 bg-[#FFFFFF]">
         <div className="container-max section-padding">
-          <div className="relative max-w-4xl mx-auto px-12">
+          <div className="relative max-w-6xl mx-auto px-12">
             {/* Opening Quote - quote-up.svg 40x40px */}
             <div className="absolute left-0 -top-2">
               <Image 
@@ -99,7 +99,7 @@ export default function AboutPage() {
             </div>
 
             {/* Our Vision Card */}
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm">
+            <div className="bg-[#FAFAFA] rounded-3xl p-8 md:p-10 shadow-sm">
               <div className="w-10 h-10 bg-[#B3766E] rounded-lg flex items-center justify-center mb-6">
                 <Lightbulb className="w-5 h-5 text-[#9D2227] fill-[#822224]" />
               </div>
@@ -144,10 +144,10 @@ export default function AboutPage() {
                     className="w-12 h-12"
                   />
                 </div>
-                <h4 className="text-[14px] md:text-[16px] font-semibold text-[#212121] mb-2 font-familjen">
+                <h4 className="text-[14px] md:text-[18px] font-semibold text-[#212121] mb-2 font-familjen">
                   {value.title}
                 </h4>
-                <p className="text-[#666] text-[12px] md:text-[14px] leading-[150%]">
+                <p className="text-[#666] text-[12px] md:text-[18px] font-light leading-[150%]">
                   {value.description}
                 </p>
               </div>

@@ -24,11 +24,11 @@ export default function OutreachPage() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#FBF4EF]">
         <div className="container-max section-padding text-center">
           {/* Heading - Familjen Grotesk Bold */}
-          <h1 className="text-[36px] md:text-[48px] font-bold text-[#212121] mb-6 font-familjen leading-[110%]">
+          <h1 className="text-[36px] md:text-[48px] lg:text-[64px] font-bold text-[#212121] mb-6 font-familjen leading-[110%]">
             Moments That Move<br className="hidden md:block" /> Communities
           </h1>
           {/* Subtext */}
-          <p className="text-[#212121] text-[14px] md:text-[16px] max-w-2xl mx-auto leading-[160%] font-bricolage">
+          <p className="text-[#212121] text-[14px] md:text-[16px] lg:text-[24px] max-w-4xl mx-auto leading-[160%] ">
             Every ACT event is built around connection, clarity, and care. Join us as we turn conversations into understanding and compassion into action.
           </p>
         </div>
@@ -37,12 +37,12 @@ export default function OutreachPage() {
       {/* Articles Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-max section-padding">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {outreachArticles.map((article, index) => (
-              <div key={index} className="max-w-sm">
+              <div key={index} className="max-w-sm bg-[#FAFAFA] rounded-bl-lg rounded-br-lg pb-6">
                 {/* Images - Side by side at the top */}
-                <div className="grid grid-cols-2 gap-1 mb-4">
-                  <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+                <div className="grid grid-cols-2 mb-4">
+                  <div className="relative aspect-[4/5] rounded-tl-lg  overflow-hidden">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -50,7 +50,7 @@ export default function OutreachPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+                  <div className="relative aspect-[4/5] rounded-tr-lg overflow-hidden">
                     <Image
                       src={article.image2}
                       alt={article.title}
@@ -61,13 +61,13 @@ export default function OutreachPage() {
                 </div>
 
                 {/* Content */}
-                <div>
+                <div className="px-4">
                   {/* Title - Familjen Grotesk SemiBold */}
-                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[#212121] mb-2 font-familjen leading-[120%]">
+                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[#212121] mb-2 font-familjen leading-[120%] ">
                     {article.title}
                   </h3>
                   {/* Description - Jost Regular smaller text */}
-                  <p className="text-[#212121] text-[12px] md:text-[14px] leading-[160%] mb-4">
+                  <p className="text-[#212121] text-[12px] md:text-[14px] lg:text-[18px] leading-[160%] mb-4">
                     {article.description}
                   </p>
                   {/* Read full article link */}

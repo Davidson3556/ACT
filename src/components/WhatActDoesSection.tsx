@@ -8,13 +8,13 @@ const features = [
     icon: "/sickle-cell-icon.svg",
     title: "Sickle Cell Awareness",
     description:
-      "We share clear, practical information about sickle cell — what it is, how it affects daily life, and how people can live better with the right knowledge and support. Through education, conversations, and community outreach, we help individuals and families understand sickle cell beyond the myths, so they can make informed decisions and feel less alone.",
+      "We share clear, practical information about sickle cell, what it is, how it affects daily life, and how people can live better with the right knowledge and support. Through education, conversations, and community outreach, we help individuals and families understand sickle cell beyond the myths, so they can make informed decisions and feel less alone.",
   },
   {
     icon: "/cancer-icon.svg",
     title: "Cancer Awareness",
     description:
-      "ACT provides simple, reliable information about cancer — early signs, prevention, and navigating care. We focus on clarity over complexity, helping people recognise when to seek help and understand their options. By making information accessible, we reduce fear and empower people to take action sooner.",
+      "ACT provides simple, reliable information about cancer, early signs, prevention, and navigating care. We focus on clarity over complexity, helping people recognise when to seek help and understand their options. By making information accessible, we reduce fear and empower people to take action sooner.",
   },
   {
     icon: "/community-icon.svg",

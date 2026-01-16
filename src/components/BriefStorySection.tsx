@@ -24,7 +24,7 @@ export default function BriefStorySection() {
             </h2>
             
             {/* Body text - Jost, Regular (400), 20px, #000000 */}
-            <div className="space-y-4 text-[#656262] text-[18px] md:text-[20px] leading-[100%]">
+            <div className="space-y-4  font-light text-[#656262] text-[18px] md:text-[20px] leading-[100%]">
               <p>
                 ACT exists because illness should not isolate people.
                 Too many families are left to navigate complex diagnoses without guidance, 

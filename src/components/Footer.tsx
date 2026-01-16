@@ -15,23 +15,13 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer 
-      className="relative pt-12 pb-48 md:pt-16 md:pb-64 font-jost overflow-hidden"
+      className="relative font-jost overflow-hidden flex flex-col"
       style={{
         background: "linear-gradient(to bottom, #FBF4EF 0%, #F2EDEA 50%, #E6E8F3 100%)"
       }}
     >
-      {/* Footer Background Image - Large ACT watermark at bottom */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] md:h-[406px]">
-        <Image
-          src="/footerbg.png"
-          alt=""
-          fill
-          className="object-contain object-bottom"
-          style={{ opacity: 10 }}
-        />
-      </div>
-
-      <div className="container-max section-padding relative z-10">
+      {/* Text Content Area */}
+      <div className="container-max section-padding pt-12 md:pt-16 pb-8 relative z-10">
         <motion.div 
           initial="hidden"
           whileInView="visible"
@@ -125,6 +115,24 @@ export default function Footer() {
             </ul>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* Footer Background Image - Large ACT watermark */}
+      <div className="relative lg:mt-8 lg:mb-8 w-full flex justify-center">
+        <div 
+          className="relative h-[300px] md:h-[406px]"
+          style={{ 
+            width: '891px',
+            maxWidth: '100%'
+          }}
+        >
+          <Image
+            src="/footerbg.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
     </footer>
   );
