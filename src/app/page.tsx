@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import FoundationQuoteSection from "@/components/FoundationQuoteSection";
 import BriefStorySection from "@/components/BriefStorySection";
 import WhatActDoesSection from "@/components/WhatActDoesSection";
 import EducationalSection from "@/components/EducationalSection";
@@ -12,10 +13,12 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroSection />
+      <FoundationQuoteSection />
       <BriefStorySection />
-      <EducationalSection />
       <WhatActDoesSection />
       <AwarenessSection />
+            <EducationalSection />
+
       <CTASection />
       <Footer />
     </main>
