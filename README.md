@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ACT Foundation Website
+
+A modern web application for the **ACT Foundation** — a nonprofit organization dedicated to Cancer and Sickle Cell advocacy, education, and care programs.
+
+> **A.C.T Today, Transform Tomorrow**
+
+## About
+
+ACT Foundation delivers life-changing support through community outreach, health education, and awareness programs. This website serves as the digital presence for the foundation, showcasing their mission, programs, and impact.
+
+### Key Features
+
+- 🏠 **Homepage** — Hero section with impact statistics, foundation story, and programs overview
+- 📚 **Education** — Health education resources and information
+- 🤝 **Outreach** — Community outreach programs and initiatives
+- 📞 **Contact** — Get in touch with the foundation
+- ℹ️ **About** — Learn more about ACT Foundation's mission
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org) with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **UI Components**: Radix UI, Lucide Icons
+- **Fonts**: Familjen Grotesk, Jost, Playfair Display, Urbanist, Bricolage Grotesque
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd act-app
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a production build:
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+act-app/
+├── public/           # Static assets (images, icons)
+├── src/
+│   ├── app/          # Next.js App Router pages
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── education/
+│   │   ├── outreach/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/   # Reusable React components
+│   └── lib/          # Utility functions
+└── package.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is private and proprietary to ACT Foundation.
