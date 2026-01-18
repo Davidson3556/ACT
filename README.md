@@ -80,9 +80,7 @@ act-app/
 └── package.json
 ```
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
