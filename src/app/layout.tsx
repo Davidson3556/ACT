@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Familjen_Grotesk, Jost, Playfair_Display, Urbanist, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const familjenGrotesk = Familjen_Grotesk({
   variable: "--font-familjen",
@@ -92,6 +93,7 @@ export default function RootLayout({
       <body
         className={`${familjenGrotesk.variable} ${jost.variable} ${playfairDisplay.variable} ${urbanist.variable} ${bricolageGrotesque.variable} antialiased`}
       >
+        <LoadingScreen minimumLoadTime={2500} />
         {children}
       </body>
     </html>
