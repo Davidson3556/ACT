@@ -57,59 +57,34 @@ export default function LoadingScreen({ minimumLoadTime = 2000 }: LoadingScreenP
               </motion.div>
             </motion.div>
 
-            {/* Loading indicator */}
-            <div className="flex flex-col items-center gap-4">
-              {/* Animated dots */}
-              <div className="flex items-center gap-2">
-                {[0, 1, 2].map((index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: [0.8, 1.2, 0.8] }}
-                    transition={{
-                      duration: 1,
-                      repeat: Infinity,
-                      delay: index * 0.2,
-                      ease: "easeInOut"
-                    }}
-                    className="w-3 h-3 rounded-full"
-                    style={{ backgroundColor: "var(--brand-primary)" }}
-                  />
-                ))}
-              </div>
-
-              {/* Loading text with shimmer effect */}
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-sm font-jost text-muted-foreground tracking-wider"
-              >
-                A.C.T Today, Transform Tomorrow
-              </motion.p>
+            {/* Animated dots */}
+            <div className="flex items-center gap-2">
+              {[0, 1, 2].map((index) => (
+                <motion.div
+                  key={index}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: [0.8, 1.2, 0.8] }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    delay: index * 0.2,
+                    ease: "easeInOut"
+                  }}
+                  className="w-3 h-3 rounded-full"
+                  style={{ backgroundColor: "var(--brand-primary)" }}
+                />
+              ))}
             </div>
 
-            {/* Progress bar */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="w-48 h-1 bg-gray-200 rounded-full overflow-hidden"
+            {/* Loading text */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-sm font-jost text-muted-foreground tracking-wider"
             >
-              <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="h-full w-1/2 rounded-full"
-                style={{ 
-                  background: "linear-gradient(90deg, var(--brand-primary), var(--color-gold), var(--brand-primary))" 
-                }}
-              />
-            </motion.div>
+              A.C.T Today, Transform Tomorrow
+            </motion.p>
           </div>
         </motion.div>
       )}
