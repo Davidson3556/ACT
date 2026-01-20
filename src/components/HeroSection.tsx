@@ -52,7 +52,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="font-jost text-[18px] md:text-[22px] lg:text-[24px] font-normal mb-8 max-w-xl"
           >
-            Practical help. Simple health information. Stronger communities.
+            Practical help.. Simple health information. Stronger communities.
           </motion.p>
 
           {/* CTA Buttons - Jost, SemiBold (600), 18px, height 48px */}
