@@ -47,7 +47,7 @@ export default function AwarenessSection() {
               Spreading love and sustenance
             </h3>
             {/* Body - Jost Regular 20px #000000 */}
-            <p className="text-[#000000] text-[18px] md:text-[20px] font-light leading-[100%] mb-6">
+            <p className="text-[#656262]  text-[16px] md:text-[18px] font-light leading-[100%] mb-6">
               From uplifting spirits at the Motherless Babies Home to providing
               essential nourishment through our Community Food Support
               program, our team is dedicated to holistic care. We believe in
